@@ -29,7 +29,8 @@ print(syn1)
 
 def nonlin(x, deriv=False):
     if (deriv == True):
-        return x * (1 - x)
+        sigm = 1 / (1 + np.exp(-x))
+        return sigm * (1 - sigm)
 
     return 1 / (1 + np.exp(-x))
 
